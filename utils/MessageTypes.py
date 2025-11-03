@@ -81,7 +81,7 @@ class MetaEvent(BaseEvent):
     sub_type: str = None
     # 根据需要添加其他字段
 
-Event = Annotated[
+Event: type[MessageEvent | NoticeEvent | RequestEvent | MetaEvent] = Annotated[
     MessageEvent | NoticeEvent | RequestEvent | MetaEvent,
     Field(discriminator='post_type')
 ]

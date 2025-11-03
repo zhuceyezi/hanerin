@@ -2,7 +2,12 @@ import inspect
 from typing import Callable, Any
 import shlex
 from typing import Tuple, Optional
-from utils.Types import *
+from utils.MessageTypes import *
+
+
+COMMAND_AS_ARG_COMMANDS = [
+    "/qrcode"
+]
 
 def parse_command(message: Message) -> Tuple[Optional[str], list[str]]:
     try:
@@ -24,6 +29,30 @@ def parse_command(message: Message) -> Tuple[Optional[str], list[str]]:
         # shlex.split 抛异常的情况（引号未闭合等）
         return None, []
 
+def handle_command_as_arg_commands(command: str, content: str, arg_list: list[str]) -> list[str] :
+    if command in COMMAND_AS_ARG_COMMANDS:
+        return [content] + arg_list
+    return arg_list
+
+def parse_no_backslash_command(message: Message) -> Tuple[Optional[str], list[str]]:
+    try:
+        for segment in message:
+            if not isinstance(segment, TextMessageSegment):
+                continue
+
+            raw = segment.data.text.strip()
+            if not raw:
+                continue
+
+            tokens = shlex.split(raw)
+            if not tokens:
+                return None, []
+            return f"{tokens[0]}", tokens[1:]
+
+        return None, []
+    except ValueError:
+        # shlex.split 抛异常的情况（引号未闭合等）
+        return None, []
 
 class CommandArgError(ValueError):
     """参数绑定失败时抛出的异常"""

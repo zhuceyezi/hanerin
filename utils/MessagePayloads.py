@@ -1,7 +1,7 @@
 from typing import Optional, Any
 from enum import StrEnum
 from typing import TypeVar
-from utils.Types import *
+from utils.MessageTypes import *
 from typing import Literal, Union, Annotated, List
 from pydantic import BaseModel, Field, model_validator
 

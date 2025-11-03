@@ -1,11 +1,20 @@
+from dotenv import load_dotenv
 from sqlmodel import SQLModel, Session, create_engine, select
-from utils.Payloads import *
+from utils.MessagePayloads import *
 from schemas.users import User
-from utils.Types import *
-from apis.SDGB.API_AimeDB import implGetUID
+from logger import logger
+from utils.MessageTypes import *
+from mai_apis.SDGB.API_AimeDB import implGetUID
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
-from apis.SDGB.update_sy import get_user_music
+from mai_apis.SDGB.update_sy import get_user_music
 import requests
+import asyncio
+from functools import wraps
+from typing import Union, List, Callable, Any
+from loguru import logger
+import os
+
+load_dotenv()
 
 def _bytes_to_int(b: bytes) -> int:
     return int.from_bytes(b, byteorder="big")
@@ -21,7 +30,7 @@ class Hanerin:
         self.url = "http://127.0.0.1:30001"
         self.command_map = {} # 0: command, 1: access list
         self.qq = qq
-        self.engine = create_engine('sqlite:///cloud/hanerin.sqlite')
+        self.engine = create_engine('sqlite:////mnt/aleafy_cloud/aleafy/Hanerin/hanerin.sqlite')
         self.df = self.Divingfish()
         self.mai2 = self.Mai2(self.engine)
         return
@@ -40,26 +49,60 @@ class Hanerin:
         else:
             return in_users
 
-
-    def add_command(self, key, value, access):
-        self.command_map[key] = [value, access]
-
-    def get_function(self, key):
-        return self.command_map.get(key, [None, None])
-
-    def command(self, keys: str | list[str], users: list[int] | str = [], groups: list[int] | str = []):
-        def decorator(func):
+    def command(self, keys: Union[str, List[str]], users: Union[List[int], str] = [], groups: Union[List[int], str] = []):
+        def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
             access = {
                 "users": users,
                 "groups": groups,
                 "all": users == 'all' and groups == 'all'
             }
+
+            if asyncio.iscoroutinefunction(func):
+                @wraps(func)
+                async def async_wrapper(*args, **kwargs):
+                    event: MessageEvent = kwargs.get("event")
+                    logger.info(f"[调用] {func.__name__} 触发用户:{event.user_id}, 入参: args={args}, kwargs={kwargs}")
+                    try:
+                        result: FastReplyPayload = await func(*args, **kwargs)
+                        # 可选：避免记录过大返回值（这里简单记录）
+                        logger.info(f"[调用] {func.__name__} 返回消息: {" ".join([item.data.text for item in result.reply])}, 完整消息: {result}")
+                        return result
+                    except Exception as e:
+                        logger.exception(f"[调用] {func.__name__} 发生异常: {e}")
+                        raise
+
+                wrapper = async_wrapper
+
+            else:
+                @wraps(func)
+                def wrapper(*args, **kwargs):
+                    event: MessageEvent = kwargs.get("event")
+                    logger.info(f"[调用] {func.__name__} 触发用户:{event.user_id}, 入参: args={args}, kwargs={kwargs}")
+                    try:
+                        result = func(*args, **kwargs)
+                        logger.info(f"[调用] {func.__name__} 返回消息: {" ".join([item.data.text for item in result.reply])}, 完整消息: {result}")
+                        return result
+                    except Exception as e:
+                        logger.exception(f"[调用] {func.__name__} 发生异常: {e}")
+                        raise
+
+                wrapper = wrapper
+
             key_list = [keys] if isinstance(keys, str) else keys
             for key in key_list:
-                self.add_command(key, func, access)
-            return func
+                self.add_command(key, wrapper, access)
 
+            return wrapper
         return decorator
+
+    def add_command(self, key, value, access):
+        self.command_map[key] = [value, access, key]
+
+    def get_function(self, key):
+        # 查二维码指令
+        if key.startswith("SGWCMAID"):
+            return self.command_map.get("/qrcode", [None, None, None])
+        return self.command_map.get(key, [None, None, None])
 
     def is_group_message(self, msg: Message) -> bool:
         first = msg[0]
@@ -71,9 +114,9 @@ class Hanerin:
 
         def __init__(self, db_engine):
             self.engine = db_engine
-            with open("cloud/aes.key", "rb") as f:
+            with open("/mnt/alist/aleafy_cloud/aleafy/Hanerin/aes.key", "rb") as f:
                 self.aes_key = f.read()
-            with open("cloud/nonce", "rb") as f:
+            with open("/mnt/alist/aleafy_cloud/aleafy/Hanerin/nonce", "rb") as f:
                 self.nonce = f.read()
             return
 
@@ -161,3 +204,5 @@ class Hanerin:
             data = response.json()
             data_by_id = {entry["id"]: entry for entry in data}
             return data_by_id
+
+hanerin = Hanerin(qq=int(os.getenv("qq")))
