@@ -1,0 +1,97 @@
+2025-11-26 09:17:00 | Level 20 | uvicorn.server:shutdown:264 - Shutting down
+2025-11-26 09:17:00 | Level 20 | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2025-11-26 09:17:00 | Level 20 | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(user_id, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(username, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(qq, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(wahlap_user_id, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(df_token, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(hashed_password, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(email, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(avatar, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(buttons, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _configure_property(roles, Column)
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) Identified primary key columns: OrderedSet([Column('user_id', Integer(), table=<hanerin_users>, primary_key=True, nullable=False)])
+2025-11-26 09:17:08 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) constructed
+2025-11-26 09:17:17 | Level 20 | uvicorn.server:_serve:84 - Started server process [264451]
+2025-11-26 09:17:17 | Level 20 | uvicorn.lifespan.on:startup:48 - Waiting for application startup.
+2025-11-26 09:17:17 | INFO     | main:lifespan:29 - 正在初始化数据库实例...
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - SELECT DATABASE()
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - [raw sql] ()
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - SELECT @@sql_mode
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - [raw sql] ()
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - SELECT @@lower_case_table_names
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - [raw sql] ()
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - BEGIN (implicit)
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - DESCRIBE `data`.`hanerin_users`
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - [raw sql] ()
+2025-11-26 09:17:17 | Level 20 | sqlalchemy.log:info:159 - COMMIT
+2025-11-26 09:17:17 | INFO     | main:lifespan:33 - 数据库实例初始化完成，耗时：15ms.
+2025-11-26 09:17:17 | Level 20 | uvicorn.lifespan.on:startup:62 - Application startup complete.
+2025-11-26 09:17:30 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 35.187.232.113:0 - "GET /net/api/user/info HTTP/1.0" 422
+2025-11-26 09:17:32 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 14.150.97.210:0 - "OPTIONS /net/api/user/info HTTP/1.0" 200
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.log:info:159 - BEGIN (implicit)
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _post_configure_properties() started
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop user_id
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop username
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop qq
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop wahlap_user_id
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop df_token
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop hashed_password
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop email
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop avatar
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop buttons
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) initialize prop roles
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.orm.mapper:_log:2471 - (User|hanerin_users) _post_configure_properties() complete
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.log:info:159 - SELECT hanerin_users.user_id, hanerin_users.username, hanerin_users.qq, hanerin_users.wahlap_user_id, hanerin_users.df_token, hanerin_users.hashed_password, hanerin_users.email, hanerin_users.avatar, hanerin_users.buttons, hanerin_users.roles 
+FROM hanerin_users 
+WHERE hanerin_users.user_id = %s 
+ LIMIT %s
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.log:info:159 - [generated in 0.00086s] (4, 2)
+2025-11-26 09:17:32 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 14.150.97.210:0 - "GET /net/api/user/info HTTP/1.0" 200
+2025-11-26 09:17:32 | Level 20 | sqlalchemy.log:info:159 - ROLLBACK
+2025-11-26 09:17:32 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 35.187.232.113:0 - "GET /net/api/user/info HTTP/1.0" 422
+2025-11-26 09:17:40 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 14.150.97.210:0 - "OPTIONS /net/api/user/mai2/preview?userId=4 HTTP/1.0" 200
+2025-11-26 09:17:40 | Level 20 | sqlalchemy.log:info:159 - BEGIN (implicit)
+2025-11-26 09:17:40 | Level 20 | sqlalchemy.log:info:159 - SELECT hanerin_users.user_id, hanerin_users.username, hanerin_users.qq, hanerin_users.wahlap_user_id, hanerin_users.df_token, hanerin_users.hashed_password, hanerin_users.email, hanerin_users.avatar, hanerin_users.buttons, hanerin_users.roles 
+FROM hanerin_users 
+WHERE hanerin_users.user_id = %s 
+ LIMIT %s
+2025-11-26 09:17:40 | Level 20 | sqlalchemy.log:info:159 - [generated in 0.00095s] ('4', 2)
+2025-11-26 09:17:40 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 14.150.97.210:0 - "OPTIONS /net/api/user/mai2/getActiveTicket?userId=4 HTTP/1.0" 200
+2025-11-26 09:17:40 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 14.150.97.210:0 - "GET /net/api/user/mai2/preview?userId=4 HTTP/1.0" 200
+2025-11-26 09:17:40 | Level 20 | sqlalchemy.log:info:159 - ROLLBACK
+2025-11-26 09:17:40 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 35.187.232.113:0 - "GET /net/api/user/mai2/getActiveTicket HTTP/1.0" 422
+2025-11-26 09:17:40 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 35.187.232.113:0 - "GET /net/api/user/mai2/preview HTTP/1.0" 422
+2025-11-26 09:17:40 | Level 20 | sqlalchemy.log:info:159 - BEGIN (implicit)
+2025-11-26 09:17:40 | Level 20 | sqlalchemy.log:info:159 - SELECT hanerin_users.user_id, hanerin_users.username, hanerin_users.qq, hanerin_users.wahlap_user_id, hanerin_users.df_token, hanerin_users.hashed_password, hanerin_users.email, hanerin_users.avatar, hanerin_users.buttons, hanerin_users.roles 
+FROM hanerin_users 
+WHERE hanerin_users.user_id = %s 
+ LIMIT %s
+2025-11-26 09:17:40 | Level 20 | sqlalchemy.log:info:159 - [cached since 0.2317s ago] ('4', 2)
+2025-11-26 09:17:40 | INFO     | mai_apis.SDGB.main.MaiUserData:__sdgb_api:213 - GetUserChargeApi 请求结果: 200
+2025-11-26 09:17:40 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 14.150.97.210:0 - "GET /net/api/user/mai2/getActiveTicket?userId=4 HTTP/1.0" 200
+2025-11-26 09:17:40 | Level 20 | sqlalchemy.log:info:159 - ROLLBACK
+2025-11-26 09:17:40 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 35.187.232.113:0 - "GET /net/api/user/mai2/getActiveTicket HTTP/1.0" 422
+2025-11-26 09:17:40 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 35.187.232.113:0 - "GET /net/api/user/mai2/preview HTTP/1.0" 422
+2025-11-26 09:18:01 | Level 20 | sqlalchemy.log:info:159 - BEGIN (implicit)
+2025-11-26 09:18:01 | Level 20 | sqlalchemy.log:info:159 - SELECT hanerin_users.user_id, hanerin_users.username, hanerin_users.qq, hanerin_users.wahlap_user_id, hanerin_users.df_token, hanerin_users.hashed_password, hanerin_users.email, hanerin_users.avatar, hanerin_users.buttons, hanerin_users.roles 
+FROM hanerin_users 
+WHERE hanerin_users.user_id = %s 
+ LIMIT %s
+2025-11-26 09:18:01 | Level 20 | sqlalchemy.log:info:159 - [cached since 17.86s ago] ('4', 2)
+2025-11-26 09:18:01 | Level 20 | sqlalchemy.log:info:159 - BEGIN (implicit)
+2025-11-26 09:18:01 | Level 20 | sqlalchemy.log:info:159 - SELECT hanerin_users.user_id, hanerin_users.username, hanerin_users.qq, hanerin_users.wahlap_user_id, hanerin_users.df_token, hanerin_users.hashed_password, hanerin_users.email, hanerin_users.avatar, hanerin_users.buttons, hanerin_users.roles 
+FROM hanerin_users 
+WHERE hanerin_users.user_id = %s 
+ LIMIT %s
+2025-11-26 09:18:01 | Level 20 | sqlalchemy.log:info:159 - [cached since 17.86s ago] ('4', 2)
+2025-11-26 09:18:01 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 14.150.97.210:0 - "GET /net/api/user/mai2/preview?userId=4 HTTP/1.0" 200
+2025-11-26 09:18:01 | Level 20 | sqlalchemy.log:info:159 - ROLLBACK
+2025-11-26 09:18:01 | INFO     | mai_apis.SDGB.main.MaiUserData:__sdgb_api:213 - GetUserChargeApi 请求结果: 200
+2025-11-26 09:18:01 | Level 20 | uvicorn.protocols.http.httptools_impl:send:476 - 14.150.97.210:0 - "GET /net/api/user/mai2/getActiveTicket?userId=4 HTTP/1.0" 200
+2025-11-26 09:18:01 | Level 20 | sqlalchemy.log:info:159 - ROLLBACK
+2025-11-26 09:33:14 | Level 20 | uvicorn.server:shutdown:264 - Shutting down
+2025-11-26 09:33:14 | Level 20 | uvicorn.lifespan.on:shutdown:67 - Waiting for application shutdown.
+2025-11-26 09:33:14 | Level 20 | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-11-26 09:33:14 | Level 20 | uvicorn.server:_serve:94 - Finished server process [264451]
