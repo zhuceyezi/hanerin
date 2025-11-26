@@ -147,6 +147,17 @@ class Hanerin:
                 user = session.exec(query).first()
                 return self._decrypt_aes_gcm(user.mai_userid)
 
+        def get_userId_from_qrcode(self, qrcode):
+            response = implGetUID(qrcode)
+            if response['errorID']:
+                if response['errorID'] == '60001':
+                    raise RuntimeError("二维码转换: 二维码内容明显无效")
+                if response['errorID'] == '60002':
+                    raise RuntimeError("二维码转换: 无法解码 Response 的内容")
+                else:
+                    raise RuntimeError(f"发生错误: {response}")
+            return response["userID"]
+
         def bind_mai_account(self, qq: int, qr_code_content: str) -> bool:
             """
             绑定华立舞萌账号

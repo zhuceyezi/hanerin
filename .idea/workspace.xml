@@ -6,29 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="05991896-23a7-4a5b-a0f0-b2d96ab063a7" name="更改" comment="更新代码，支持清票，和各类解锁">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Hanerin-Napcat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAO/base/baseDAO.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAO/userDAO.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/df.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/mai2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/net.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/qq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_main.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/ApiResponseTypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/mcsmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mai_apis/mcsmanager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sign.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAO/base/baseDAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/base/baseDAO.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/Hanerin.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/Hanerin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schemas/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/Payloads.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/MessagePayloads.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/Types.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/MessageTypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/mai2.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/mai2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/net.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/qq.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/qq.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/ApiResponseTypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/ApiResponseTypes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +49,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/front/api-front/index.html" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -68,42 +60,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;FastAPI.FastAPIProject.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.API_AimeDB.executor&quot;: &quot;Run&quot;,
-    &quot;Python.b50.executor&quot;: &quot;Run&quot;,
-    &quot;Python.maimile.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.music (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.music.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ticket.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.unlock.executor&quot;: &quot;Run&quot;,
-    &quot;Python.unlock_all.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/alist/aleafy_cloud/aleafy/Hanerin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;/home/aleafy/PycharmProjects/Hanerin-Napcat/apis/SDGB/fail.json&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "FastAPI.FastAPIProject.executor": "Debug",
+    "Python.API_AimeDB.executor": "Run",
+    "Python.API_AuthLiteDelivery.executor": "Run",
+    "Python.authlite.executor": "Run",
+    "Python.b50.executor": "Run",
+    "Python.maimile.executor": "Run",
+    "Python.main.executor": "Debug",
+    "Python.music (1).executor": "Run",
+    "Python.music.executor": "Run",
+    "Python.sign.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.ticket.executor": "Run",
+    "Python.unlock.executor": "Run",
+    "Python.unlock_all.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/mnt/alist/aleafy_cloud/aleafy/Hanerin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Errors",
+    "two.files.diff.last.used.file": "/home/aleafy/PycharmProjects/Hanerin-Napcat/apis/SDGB/fail.json",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
-      &quot;JSON&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件": [
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" side_tool="true" />
@@ -113,8 +108,8 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17602539" />
-      <window_info id="Commit" order="1" weight="0.122802734" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14095053" />
+      <window_info id="Commit" order="1" weight="0.14379883" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
@@ -123,13 +118,13 @@
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" weight="0.33016306" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.30480072" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.3338816" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.3678728" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.3156703" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.3294956" />
-      <window_info anchor="bottom" id="Debug" order="6" visible="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="6" visible="true" weight="0.38541666" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.1" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.3125" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.3338816" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32925725" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
@@ -137,7 +132,7 @@
       <window_info anchor="right" id="Jupyter Variables" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="2" visible="true" weight="0.20922852" />
+      <window_info active="true" anchor="right" id="Database" order="2" visible="true" weight="0.17480469" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
       <window_info anchor="right" id="Trae AI" order="5" />
@@ -185,7 +180,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="maimile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="API_AuthLiteDelivery" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hanerin-Napcat" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,12 +189,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apis/SDGB/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mai_apis/SDGB/main" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apis/SDGB/main/maimile.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mai_apis/SDGB/main/API_AuthLiteDelivery.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -208,7 +203,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="music (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="music" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hanerin-Napcat" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,12 +212,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apis/SDGB/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mai_apis/SDGB/main" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apis/SDGB/main/music.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mai_apis/SDGB/main/music.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -231,7 +226,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="sign" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hanerin-Napcat" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,12 +235,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apis/SDGB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apis/SDGB/main/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sign.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -263,12 +258,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apis/SDGB/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mai_apis/SDGB" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apis/SDGB/main/ticket.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mai_apis/SDGB/ticket.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -296,11 +291,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.API_AimeDB" />
-        <item itemvalue="Python.music (1)" />
+        <item itemvalue="Python.music" />
         <item itemvalue="Python.ticket" />
-        <item itemvalue="Python.maimile" />
-        <item itemvalue="Python.test" />
+        <item itemvalue="Python.sign" />
+        <item itemvalue="Python.API_AuthLiteDelivery" />
+        <item itemvalue="Python.API_AimeDB" />
       </list>
     </recent_temporary>
   </component>
@@ -342,6 +337,10 @@
       <workItem from="1761044582117" duration="3263000" />
       <workItem from="1761113643757" duration="23885000" />
       <workItem from="1761631081138" duration="3417000" />
+      <workItem from="1762155001682" duration="16297000" />
+      <workItem from="1762411021560" duration="5076000" />
+      <workItem from="1762494402139" duration="10218000" />
+      <workItem from="1763966028041" duration="21188000" />
     </task>
     <task id="LOCAL-00001" summary="更新代码，支持清票，和各类解锁">
       <option name="closed" value="true" />
@@ -351,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758355415411</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="更新代码，支持清票，和各类解锁">
+      <option name="closed" value="true" />
+      <created>1762155221874</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762155221874</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,18 +412,18 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/mai_apis/SDGB/main/MaiUserData.py</url>
-          <line>518</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mai_apis/SDGB/main/test.py</url>
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/mai_apis/SDGB/main/MaiUserData.py</url>
-          <line>182</line>
-          <option name="timeStamp" value="72" />
+          <url>file://$PROJECT_DIR$/services/net.py</url>
+          <line>265</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/services/net.py</url>
+          <line>229</line>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -424,14 +431,17 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Hanerin_Napcat$maimile.coverage" NAME="maimile 覆盖结果" MODIFIED="1752294347635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apis/SDGB/main" />
     <SUITE FILE_PATH="coverage/Hanerin_Napcat$unlock.coverage" NAME="unlock 覆盖结果" MODIFIED="1751393740738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apis/SDGB" />
-    <SUITE FILE_PATH="coverage/Hanerin_Napcat$music__1_.coverage" NAME="music (1) 覆盖结果" MODIFIED="1761026458633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apis/SDGB/main" />
-    <SUITE FILE_PATH="coverage/Hanerin_Napcat$b50.coverage" NAME="b50 覆盖结果" MODIFIED="1745885431652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/Hanerin_Napcat$ticket.coverage" NAME="ticket 覆盖结果" MODIFIED="1760340341453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apis/SDGB/main" />
     <SUITE FILE_PATH="coverage/Hanerin_Napcat$main.coverage" NAME="main 覆盖结果" MODIFIED="1760340367446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Hanerin_Napcat$music.coverage" NAME="music 覆盖结果" MODIFIED="1761026416438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apis/SDGB" />
     <SUITE FILE_PATH="coverage/Hanerin_Napcat$test.coverage" NAME="test 覆盖结果" MODIFIED="1752294084857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apis/SDGB" />
     <SUITE FILE_PATH="coverage/Hanerin_Napcat$API_AimeDB.coverage" NAME="API_AimeDB 覆盖结果" MODIFIED="1761046789515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apis/SDGB" />
+    <SUITE FILE_PATH="coverage/Hanerin_Napcat$music.coverage" NAME="music 覆盖结果" MODIFIED="1764054094335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mai_apis/SDGB/main" />
     <SUITE FILE_PATH="coverage/Hanerin_Napcat$unlock_all.coverage" NAME="unlock_all 覆盖结果" MODIFIED="1751186046017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apis/SDGB" />
-    <SUITE FILE_PATH="coverage/Hanerin_Napcat$FastAPIProject.coverage" NAME="FastAPIProject 覆盖结果" MODIFIED="1761631933455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Hanerin_Napcat$music__1_.coverage" NAME="music (1) 覆盖结果" MODIFIED="1761026458633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apis/SDGB/main" />
+    <SUITE FILE_PATH="coverage/Hanerin_Napcat$b50.coverage" NAME="b50 覆盖结果" MODIFIED="1745885431652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/Hanerin_Napcat$authlite.coverage" NAME="authlite 覆盖结果" MODIFIED="1762501701026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mai_apis/SDGB" />
+    <SUITE FILE_PATH="coverage/Hanerin_Napcat$ticket.coverage" NAME="ticket 覆盖结果" MODIFIED="1764053152668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mai_apis/SDGB" />
+    <SUITE FILE_PATH="coverage/Hanerin_Napcat$sign.coverage" NAME="sign 覆盖结果" MODIFIED="1763976668467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Hanerin_Napcat$API_AuthLiteDelivery.coverage" NAME="API_AuthLiteDelivery 覆盖结果" MODIFIED="1762502010015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mai_apis/SDGB/main" />
+    <SUITE FILE_PATH="coverage/Hanerin_Napcat$FastAPIProject.coverage" NAME="FastAPIProject 覆盖结果" MODIFIED="1764065505196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

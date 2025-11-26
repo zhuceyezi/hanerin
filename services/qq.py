@@ -7,9 +7,12 @@ from utils.utils import parse_command, parse_no_backslash_command, handle_comman
 
 route = APIRouter(prefix="/qq")
 
-
+noQQ = True
 @route.post("/")
 async def routing(event: Event) -> Response:
+    if noQQ:
+        return None
+
     if not isinstance(event, MessageEvent):
         return Response("必须为消息", status_code=404)
 

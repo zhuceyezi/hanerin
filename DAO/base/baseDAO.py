@@ -57,7 +57,7 @@ class BaseDAO(Generic[ModelType]):
             await db.commit()
             await db.refresh(obj)  # 确保获取自增ID等
             return obj
-        except Exception:
+        except Exception as e:
             await db.rollback()
             return None
 

@@ -1,5 +1,7 @@
 from io import BytesIO
 from fastapi import APIRouter, Response
+from fastapi.params import Query
+
 from bot.Hanerin import hanerin
 import json
 
@@ -46,3 +48,7 @@ async def b50_divingfish(qq):
     img_io = BytesIO()
     pic.save(img_io, format='PNG')
     return Response(content=img_io.getvalue(), media_type="image/png")
+
+@route.get("/getUserIdFromQRCode")
+async def get_userId_from_qrcode(qrcode=Query(...)):
+    return hanerin.mai2.get_userId_from_qrcode(qrcode)

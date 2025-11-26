@@ -1,5 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
 import time
-
 from exceptiongroup import catch
 from fastapi.middleware.cors import CORSMiddleware
 from logger import logger
@@ -13,13 +14,11 @@ from io import BytesIO
 from utils.MessagePayloads import FastReplyPayload
 import json
 from mai_apis.mcsmanager import McsManager
-from dotenv import load_dotenv
 from services import qq,df,mai2,net
 from utils.MessageTypes import TextMessageSegment, MessageType, TextMessageSegmentData, MessageEvent
 from utils.maimai_best_50 import generate50
 import os
 
-load_dotenv()
 mcs_api = os.getenv("mcs_api_key")
 mcs = McsManager(api_key=mcs_api)
 
@@ -38,7 +37,7 @@ bot = FastAPI(lifespan=lifespan)
 
 bot.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 允许所有来源（前端域名）
+    allow_origins=["http://localhost:3006", "https://maimai.aleafy.top:8000"],  # 允许所有来源（前端域名）
     allow_credentials=True,
     allow_methods=["*"],  # 允许所有 HTTP 方法（GET, POST, PUT, DELETE 等）
     allow_headers=["*"],  # 允许所有请求头

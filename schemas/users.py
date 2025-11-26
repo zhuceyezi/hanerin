@@ -8,7 +8,7 @@ from utils.ApiResponseTypes import UserInfo
 class User(Base):
     __tablename__ = "hanerin_users"
     user_id: int = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
-    username: str = Column(String(10), unique=True, nullable=False)
+    username: str = Column(String(100), unique=True, nullable=False)
     qq: int = Column(BigInteger, nullable=True, default=None)
     wahlap_user_id: Optional[str] = Column(String(8), nullable=True, default=None)
     df_token: Optional[str] = Column(String(50), nullable=True, default=None)

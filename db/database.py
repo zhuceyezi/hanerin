@@ -11,7 +11,7 @@ class Base(AsyncAttrs, DeclarativeBase):
 
 
 load_dotenv()
-DATABASE_URL = f"mysql+aiomysql://{os.getenv("db_username")}:{os.getenv("db_password")}@aleafy.top:23306/data?charset=utf8mb4"
+DATABASE_URL = f"mysql+aiomysql://{os.getenv("db_username")}:{os.getenv("db_password")}@127.0.0.1:3306/data?charset=utf8mb4"
 
 # 创建异步引擎
 # - echo=True 用于开发（打印 SQL），生产环境设为 False

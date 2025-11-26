@@ -48,6 +48,12 @@ sqlalchemy_logger.propagate = False  # 避免重复输出
 
 # 可选：如果你只想看 SQL 语句，可以只监听 engine
 # logging.getLogger("sqlalchemy.engine").addHandler(InterceptHandler())
+# 拦截 uvicorn、fastapi、gunicorn 等常用日志源
+for name in ["uvicorn", "uvicorn.error", "uvicorn.access", "fastapi", "gunicorn"]:
+    logging.getLogger(name).handlers = [InterceptHandler()]
+    logging.getLogger(name).propagate = False
 
+# 同时设置根 logger（可选，避免遗漏）
+logging.getLogger().handlers = [InterceptHandler()]
 # ========== 导出 logger 供其他模块使用 ==========
 __all__ = ["logger"]
